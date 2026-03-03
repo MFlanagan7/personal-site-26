@@ -3,8 +3,8 @@ import './globals.css';
 import Header from '@/sections/Header/Header';
 
 export const metadata: Metadata = {
-  title: 'Your Name',
-  description: 'Your tagline here',
+  title: "Michael Flanagan's Personal Site",
+  description: 'Developer at the intersection of code and marketing.',
 };
 
 export default function RootLayout({

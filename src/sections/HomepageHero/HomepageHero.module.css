@@ -1,0 +1,247 @@
+/* ============================================================
+   HERO SECTION
+   Full-viewport introduction with staggered entrance animations.
+   Background glow uses accent color at very low opacity.
+============================================================ */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-block: var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle radial glow -- accent color at low opacity */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(168, 104, 40, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 15% 75%, rgba(168, 104, 40, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ============================================================
+   AVAILABILITY BADGE
+============================================================ */
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  padding: var(--space-1) var(--space-3);
+  margin-bottom: var(--space-5);
+
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0s forwards;
+}
+
+.availabilityDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4caf7d;
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ============================================================
+   EYEBROW
+============================================================ */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.12s forwards;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 1px;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.eyebrowText {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  /* text-muted not accent -- accent at this size fails AA */
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   HEADING
+============================================================ */
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-5);
+  max-width: 14ch;
+
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.24s forwards;
+}
+
+/* Accent on large heading -- decorative, passes large text threshold */
+.headingAccent {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+/* ============================================================
+   TAGLINE
+============================================================ */
+.tagline {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  max-width: 52ch;
+  margin-bottom: var(--space-6);
+
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.36s forwards;
+}
+
+/* ============================================================
+   ACTIONS
+============================================================ */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-6);
+
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.48s forwards;
+}
+
+/* Primary button -- white on #a86828 = 4.8:1 -- passes AA */
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--color-accent);
+  padding: var(--space-3) var(--space-5);
+  min-height: var(--tap-target-min);
+  border: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.btnPrimary:hover {
+  background: var(--color-accent-light);
+  transform: translateY(-1px);
+}
+
+/* Ghost button */
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-5);
+  min-height: var(--tap-target-min);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.btnGhost:hover {
+  color: var(--color-text);
+  border-color: var(--color-text-muted);
+  transform: translateY(-1px);
+}
+
+/* ============================================================
+   LOCATION
+============================================================ */
+.location {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--color-text-subtle);
+
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.6s forwards;
+}
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(0.8); }
+}
+
+/* Reduced motion -- system preference overrides all animations */
+@media (prefers-reduced-motion: reduce) {
+  .availability,
+  .eyebrow,
+  .heading,
+  .tagline,
+  .actions,
+  .location {
+    animation: none;
+    opacity: 1;
+  }
+
+  .availabilityDot {
+    animation: none;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (min-width: 768px) {
+  .inner {
+    padding-inline: var(--space-5);
+  }
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    padding-inline: var(--space-6);
+  }
+}
