@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--space-3);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--space-5);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: var(--space-6);
+  }
+}
+
+/* Size variants -- max-width only, padding handled above */
+.sm   { max-width: 640px; }
+.md   { max-width: 768px; }
+.lg   { max-width: 1024px; }
+.full { max-width: none; }

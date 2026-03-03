@@ -1,0 +1,13 @@
+:root {
+  --space-1:  4px;   /* smallest */
+  --space-2:  8px;   /* small */
+  --space-3:  16px;  /* normal */
+  --space-4:  24px;  /* normal-plus */
+  --space-5:  32px;  /* big */
+  --space-6:  48px;  /* bigger */
+  --space-7:  64px;  /* biggest */
+  --space-8:  96px;  /* section */
+  --space-9:  128px; /* hero */
+
+  --tap-target-min: 44px; /* min sizing for tap targets */
+}

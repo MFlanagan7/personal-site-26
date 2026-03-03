@@ -1,0 +1,26 @@
+:root {
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans:  'DM Sans', system-ui, sans-serif;
+  --font-mono:  'Courier Prime', monospace;
+
+  /* Scale */
+  --text-xs:   0.75rem;   /* 12px -- labels, tags */
+  --text-sm:   0.875rem;  /* 14px -- captions, meta */
+  --text-base: 1rem;      /* 16px -- body */
+  --text-lg:   1.125rem;  /* 18px -- lead text */
+  --text-xl:   1.25rem;   /* 20px -- small headings */
+  --text-2xl:  1.5rem;    /* 24px */
+  --text-3xl:  2rem;      /* 32px */
+  --text-4xl:  2.75rem;   /* 44px */
+  --text-5xl:  3.75rem;   /* 60px -- hero */
+
+  /* Line heights */
+  --leading-tight:  1.2;
+  --leading-normal: 1.6;
+  --leading-loose:  1.85;
+
+  /* Letter spacing */
+  --tracking-tight: -0.02em;
+  --tracking-wide:  0.08em;
+  --tracking-wider: 0.15em;
+}

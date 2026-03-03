@@ -1,0 +1,44 @@
+/* Base -- mobile */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  /* space-between pushes leftGroup to the left
+     and HeaderIcons to the right */
+  justify-content: space-between;
+  padding-block: var(--space-4);
+}
+
+.leftGroup {
+  display: flex;
+  align-items: center;
+  /* No gap on mobile -- Nav renders nothing visible here,
+     hamburger has moved to HeaderIcons */
+  gap: 0;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+/* Desktop and up -- 1024px */
+@media (min-width: 1024px) {
+  .leftGroup {
+    /* At desktop, Nav expands into links so we add
+       space between logo and the nav links */
+    gap: var(--space-5);
+  }
+}

@@ -1,0 +1,27 @@
+:root {
+  --color-bg:           #faf9f7;
+  --color-bg-subtle:    #f0ece6;
+  --color-surface:      #ffffff;
+  --color-text:         #2a2520;
+  --color-text-muted:   #6b6259;
+  --color-text-subtle:  #a89e94;
+  --color-border:       #e8e5e0;
+  --color-accent:       #a86828;  /* darkened from #c17f3e for AA compliance */
+  --color-accent-light: #c17f3e;  /* original amber now used as hover/light variant */
+  --color-accent-dim:   #f5ebe0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:           #141210;
+    --color-bg-subtle:    #1c1916;
+    --color-surface:      #1f1c18;
+    --color-text:         #f0ece6;
+    --color-text-muted:   #a89e94;
+    --color-text-subtle:  #5a524a;
+    --color-border:       #2a2520;
+    --color-accent:       #e8a96a;  /* lighter in dark mode for contrast on dark bg */
+    --color-accent-light: #f5c898;
+    --color-accent-dim:   #2a1f14;
+  }
+}
