@@ -1,0 +1,90 @@
+/* ============================================================
+   CURRENTLY SECTION
+   Hardcoded data from src/data/currently.ts.
+   Update that file and redeploy to change content.
+============================================================ */
+
+.section {
+  background: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding-block: var(--space-7);
+}
+
+/* ============================================================
+   EYEBROW
+============================================================ */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.eyebrowText {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  white-space: nowrap;
+}
+
+.eyebrowLine {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* ============================================================
+   GRID
+   4 items = 2x2 on mobile, 4x1 on desktop.
+   If you add a 5th or 6th item, change to repeat(3, 1fr)
+   at the md breakpoint and remove the lg override.
+============================================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  list-style: none;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ============================================================
+   ITEM
+============================================================ */
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  transition: border-color 0.2s ease;
+}
+
+.item:hover {
+  border-color: var(--color-accent);
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+/* Italic serif for the value -- warm, personal feel */
+.value {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.5;
+}
