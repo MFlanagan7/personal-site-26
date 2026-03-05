@@ -1,0 +1,205 @@
+/* ============================================================
+   FEATURED PROJECTS SECTION
+============================================================ */
+
+.section {
+  padding-block: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ============================================================
+   SECTION HEADER
+============================================================ */
+.header {
+  margin-bottom: var(--space-7);
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.eyebrowText {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  white-space: nowrap;
+}
+
+.eyebrowLine {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.eyebrowLink {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.eyebrowLink:hover {
+  color: var(--color-accent-light);
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+
+.sub {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  max-width: none;
+}
+
+/* ============================================================
+   GRID
+============================================================ */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================================
+   PROJECT CARD
+============================================================ */
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.cardNum {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-style: italic;
+  color: var(--color-border);
+  line-height: 1;
+  margin-bottom: var(--space-3);
+  /* Number grows slightly more visible on hover */
+  transition: color 0.2s ease;
+}
+
+.card:hover .cardNum {
+  color: var(--color-accent-light);
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.cardSummary {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: var(--space-4);
+  max-width: none;
+  /* push links to bottom of card */
+  flex: 1;
+}
+
+.cardTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.tag {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  border: 1px solid var(--color-border);
+  padding: 2px var(--space-2);
+}
+
+.cardLinks {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.cardLink {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.cardLink:hover {
+  border-bottom-color: var(--color-accent);
+  color: var(--color-accent-light);
+}
+
+/* ============================================================
+   PLACEHOLDER CARD
+   Remove this once you have 2+ real projects.
+============================================================ */
+.cardPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border: 1px dashed var(--color-border);
+  opacity: 0.45;
+  min-height: 200px;
+}
+
+.cardPlaceholderIcon {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+}
+
+.cardPlaceholderText {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
