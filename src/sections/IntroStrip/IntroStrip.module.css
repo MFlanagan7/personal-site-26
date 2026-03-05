@@ -1,0 +1,97 @@
+/* ============================================================
+   INTRO STRIP
+   Two-column section between Hero and Featured Work.
+   Left: serif pull quote. Right: skill pills.
+   Collapses to single column on mobile.
+============================================================ */
+
+.intro {
+  background: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding-block: var(--space-7);
+}
+
+/* ============================================================
+   GRID
+============================================================ */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: var(--space-7);
+  }
+}
+
+/* ============================================================
+   PULL QUOTE TEXT
+============================================================ */
+.text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  line-height: 1.8;
+  color: var(--color-text);
+  /* override base.css max-width: 65ch for this element */
+  max-width: none;
+}
+
+/* Accent on large serif -- decorative, passes large text threshold */
+.accent {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+/* ============================================================
+   SKILL PILLS
+============================================================ */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  /* align to top on desktop so pills don't float in center */
+  align-self: start;
+}
+
+@media (min-width: 768px) {
+  .pills {
+    align-self: center;
+  }
+}
+
+.pill {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--space-1) var(--space-3);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.pill:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (min-width: 768px) {
+  .inner {
+    padding-inline: var(--space-5);
+  }
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    padding-inline: var(--space-6);
+  }
+}
