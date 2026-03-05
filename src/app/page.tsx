@@ -1,3 +1,4 @@
+import CTAStrip from "@/sections/CTAStrip/CTAStrip";
 import Currently from "@/sections/Currently/Currently";
 import FeaturedProjects from "@/sections/FeaturedProjects/FeaturedProjects";
 import FeaturedWork from "@/sections/FeaturedWork/FeaturedWork";
@@ -14,6 +15,7 @@ export default function Home() {
       <Currently />
       <FeaturedProjects />
       <SkillsStrip />
+      <CTAStrip />
     </>
   );
 }
