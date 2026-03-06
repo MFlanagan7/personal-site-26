@@ -1,0 +1,52 @@
+/* ============================================================
+   PAGE HEADER
+   Reusable top-of-page header for all inner pages.
+   Used on: /work, /projects, /about, /blog
+============================================================ */
+
+.header {
+  padding-top: calc(var(--space-8) + 72px); /* fixed header offset */
+  padding-bottom: var(--space-7);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 1px;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.eyebrowText {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-3);
+}
+
+.sub {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  max-width: 52ch;
+  max-width: none;
+}
