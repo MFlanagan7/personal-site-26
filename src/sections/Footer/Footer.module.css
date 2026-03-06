@@ -1,0 +1,126 @@
+/* ============================================================
+   FOOTER
+   Two-zone layout: left branding, right nav groups.
+   Collapses to stacked on mobile.
+============================================================ */
+
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-5);
+  background: var(--color-bg);
+}
+
+/* ============================================================
+   INNER -- branding left, nav right
+============================================================ */
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+/* ============================================================
+   LEFT -- name and tagline
+============================================================ */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.name:hover {
+  color: var(--color-accent);
+}
+
+.tagline {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--color-text-subtle);
+  line-height: 1.5;
+  max-width: none;
+}
+
+/* ============================================================
+   NAV -- two groups side by side
+============================================================ */
+.nav {
+  display: flex;
+  gap: var(--space-7);
+}
+
+.navGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.navLabel {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  list-style: none;
+}
+
+.navLink {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--color-accent);
+}
+
+/* ============================================================
+   BOTTOM -- copyright bar
+============================================================ */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+.copyright {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+}
+
+.built {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+}
