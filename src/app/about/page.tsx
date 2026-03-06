@@ -72,7 +72,7 @@ export default function AboutPage() {
             <div className={styles.skillGroup}>
               <h3 className={styles.skillGroupLabel}>Developing</h3>
               <ul className={styles.skillList} aria-label="Skills in development">
-                {about.skills.developing.map((skill) => (
+                {about.skills.exploring.map((skill) => (
                   <li key={skill} className={`${styles.skillItem} ${styles.skillItemDeveloping}`}>
                     {skill}
                   </li>

@@ -18,12 +18,14 @@ export interface Certification {
   expires?: string;
   credentialId?: string;
   status: "active" | "expired" | "in-progress";
+  showOnResume: boolean;
+  resumeVersions: string[];
 }
 
 export interface SkillGroup {
   primary: string[];
   secondary: string[];
-  developing: string[];
+  exploring: string[];
 }
 
 export const about = {
@@ -73,7 +75,7 @@ export const about = {
       "UTM Tracking",
       "Email Marketing",
     ],
-    developing: [
+    exploring: [
       "Svelte",
       "Astro",
       "MySQL",
@@ -125,6 +127,8 @@ export const about = {
       issued: "Sep 2024",
       expires: "Oct 2025",
       status: "active",
+      showOnResume: true,
+      resumeVersions: ["all"],
     },
     {
       name: "HubSpot CMS for Developers",
@@ -132,6 +136,8 @@ export const about = {
       issued: "Mar 2024",
       expires: "Apr 2025",
       status: "active",
+      showOnResume: true,
+    resumeVersions: ["hubspot", "marketing-technologist"],
     },
     {
       name: "Contextual Marketing",
@@ -139,6 +145,8 @@ export const about = {
       issued: "Oct 2024",
       expires: "Nov 2025",
       status: "active",
+      showOnResume: true,
+    resumeVersions: ["hubspot", "marketing-technologist"],
     },
     {
       name: "Integrating With HubSpot I: Foundations",
@@ -146,6 +154,8 @@ export const about = {
       issued: "",   // update when earned
       expires: "",  // update when earned
       status: "in-progress",
+      showOnResume: true,
+    resumeVersions: ["hubspot", "marketing-technologist"],
     },
     {
       name: "Google Analytics Individual Qualification",
@@ -154,24 +164,32 @@ export const about = {
       expires: "Aug 2024",
       // Expired -- worth renewing given your analytics work
       status: "expired",
+      showOnResume: true,
+    resumeVersions: ["all"],
     },
     {
       name: "Programming Foundations: Software Testing/QA",
       issuer: "LinkedIn Learning",
       issued: "Jul 2023",
       status: "active",
+      showOnResume: false,
+    resumeVersions: [],
     },
     {
       name: "React: Creating and Hosting a Full-Stack Site",
       issuer: "LinkedIn Learning",
       issued: "Jun 2023",
       status: "active",
+      showOnResume: false,
+    resumeVersions: [],
     },
     {
       name: "Flutter Mobile Applications Development",
       issuer: "LX Studio",
       issued: "Aug 2022",
       status: "active",
+      showOnResume: false,
+    resumeVersions: [],
     },
   ] as Certification[],
 };
