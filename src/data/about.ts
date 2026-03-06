@@ -46,8 +46,8 @@ export const about = {
 
   // Update these with your real URLs before launch
   links: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
+    github: "https://github.com/MFlanagan7",
+    linkedin: "https://www.linkedin.com/in/michael-flanagan/",
     email: "hello@michaelflanagan.dev", // update with real email
     resume: "/resume",
   },

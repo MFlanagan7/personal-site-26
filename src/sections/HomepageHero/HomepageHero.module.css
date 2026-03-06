@@ -8,7 +8,8 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-block: var(--space-8);
+  padding-top: calc(var(--space-8) + 72px);
+  padding-bottom: var(--space-8);
   position: relative;
   overflow: hidden;
 }
@@ -228,20 +229,5 @@
 
   .availabilityDot {
     animation: none;
-  }
-}
-
-/* ============================================================
-   RESPONSIVE
-============================================================ */
-@media (min-width: 768px) {
-  .inner {
-    padding-inline: var(--space-5);
-  }
-}
-
-@media (min-width: 1024px) {
-  .inner {
-    padding-inline: var(--space-6);
   }
 }
