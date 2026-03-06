@@ -1,0 +1,360 @@
+/* ============================================================
+   ABOUT PAGE
+============================================================ */
+
+.section {
+  padding-block: var(--space-7);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sectionSubtle {
+  background: var(--color-bg-subtle);
+}
+
+.sectionHeading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: var(--space-5);
+}
+
+/* ============================================================
+   BIO
+============================================================ */
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bioParagraph {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.85;
+  max-width: none;
+}
+
+/* ============================================================
+   SKILLS
+============================================================ */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skillGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.skillGroupLabel {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+}
+
+.skillItem {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.skillItem:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.skillItemPrimary {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.skillItemDeveloping {
+  opacity: 0.6;
+}
+
+/* ============================================================
+   EDUCATION
+============================================================ */
+.eduList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.eduItem {
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.eduItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.eduHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.eduDegree {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.eduSchool {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--color-accent);
+  max-width: none;
+}
+
+.eduMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+.eduPeriod {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--color-text-subtle);
+}
+
+.eduGpa {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--color-text-subtle);
+}
+
+.eduHonors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.honorBadge {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 2px var(--space-2);
+}
+
+.eduNote {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--color-text-subtle);
+  font-style: italic;
+  max-width: none;
+}
+
+/* ============================================================
+   CERTIFICATIONS
+============================================================ */
+.certList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  list-style: none;
+}
+
+.certItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.certItem:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.certBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.certName {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--color-text);
+}
+
+.certIssuer {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--color-text-subtle);
+}
+
+.certMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.certDate {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--color-text-subtle);
+}
+
+.certStatus {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px var(--space-2);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-subtle);
+}
+
+.certStatus[data-status="active"] {
+  color: #4caf7d;
+  border-color: #4caf7d;
+}
+
+.certStatus[data-status="in-progress"] {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.certStatus[data-status="expired"] {
+  opacity: 0.5;
+}
+
+/* ============================================================
+   CONNECT
+============================================================ */
+.connectText {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: var(--space-5);
+  max-width: none;
+}
+
+.connectLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-6);
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--color-accent);
+  padding: var(--space-3) var(--space-5);
+  min-height: var(--tap-target-min);
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btnPrimary:hover {
+  background: var(--color-accent-light);
+  transform: translateY(-1px);
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-5);
+  min-height: var(--tap-target-min);
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.btnGhost:hover {
+  color: var(--color-text);
+  border-color: var(--color-text-muted);
+  transform: translateY(-1px);
+}
+
+.resumePrompt {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  padding: var(--space-5) var(--space-6);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
+}
+
+.resumePromptText {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  max-width: none;
+}
+
+.resumeLink {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.resumeLink:hover {
+  color: var(--color-accent-light);
+}
