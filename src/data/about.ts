@@ -19,12 +19,16 @@ export interface Certification {
   credentialId?: string;
   status: "active" | "expired" | "in-progress";
   showOnResume: boolean;
-  resumeVersions: string[];
+  // which resume versions this cert appears on
+  // "all" = frontend, marketing-technologist, hubspot
+  resumeVersions: ("all" | "frontend" | "marketing-technologist" | "hubspot")[];
 }
 
 export interface SkillGroup {
   primary: string[];
   secondary: string[];
+  // renamed from "developing" -- these are skills we're familiar with
+  // or actively exploring, not necessarily in active use
   exploring: string[];
 }
 
@@ -46,12 +50,12 @@ export const about = {
   location: "Oklahoma City, OK",
   availability: "Open to new opportunities",
 
-  // Update these with your real URLs before launch
   links: {
     github: "https://github.com/MFlanagan7",
-    linkedin: "https://www.linkedin.com/in/michael-flanagan/",
-    email: "hello@michaelflanagan.dev", // update with real email
+    linkedin: "https://linkedin.com/in/michael-flanagan",
+    email: "mflanagan7@gmail.com",
     resume: "/resume",
+    portfolio: "https://michaelflanagan.dev",
   },
 
   skills: {
@@ -75,6 +79,9 @@ export const about = {
       "UTM Tracking",
       "Email Marketing",
     ],
+    // Familiar with or actively exploring -- not production-proficient.
+    // Do NOT list these on the resume skills section.
+    // Mention conversationally in interviews if relevant.
     exploring: [
       "Svelte",
       "Astro",
@@ -87,7 +94,7 @@ export const about = {
 
   education: [
     {
-      degree: "Bachelor of Science, Computer Science (completing)",
+      degree: "Bachelor of Science, Computer Science (In Progress)",
       school: "University of Central Oklahoma",
       period: "2020 – 2023",
       gpa: "3.61",
@@ -121,6 +128,7 @@ export const about = {
   ] as Education[],
 
   certifications: [
+    // ─── Tier 1 -- appears on all resume versions ───────────────────
     {
       name: "HubSpot CMS for Developers II",
       issuer: "HubSpot Academy",
@@ -131,13 +139,26 @@ export const about = {
       resumeVersions: ["all"],
     },
     {
+      name: "Google Analytics Individual Qualification",
+      issuer: "Google Skillshop",
+      issued: "Aug 2023",
+      expires: "Aug 2024",
+      // Expired -- renew before or shortly after launch.
+      // Free exam at skillshop.google.com -- takes ~90 minutes.
+      status: "expired",
+      showOnResume: true,
+      resumeVersions: ["all"],
+    },
+
+    // ─── Tier 2 -- HubSpot and Marketing Technologist versions only ─
+    {
       name: "HubSpot CMS for Developers",
       issuer: "HubSpot Academy",
       issued: "Mar 2024",
       expires: "Apr 2025",
       status: "active",
       showOnResume: true,
-    resumeVersions: ["hubspot", "marketing-technologist"],
+      resumeVersions: ["hubspot", "marketing-technologist"],
     },
     {
       name: "Contextual Marketing",
@@ -146,7 +167,7 @@ export const about = {
       expires: "Nov 2025",
       status: "active",
       showOnResume: true,
-    resumeVersions: ["hubspot", "marketing-technologist"],
+      resumeVersions: ["hubspot", "marketing-technologist"],
     },
     {
       name: "Integrating With HubSpot I: Foundations",
@@ -155,25 +176,17 @@ export const about = {
       expires: "",  // update when earned
       status: "in-progress",
       showOnResume: true,
-    resumeVersions: ["hubspot", "marketing-technologist"],
+      resumeVersions: ["hubspot", "marketing-technologist"],
     },
-    {
-      name: "Google Analytics Individual Qualification",
-      issuer: "Google Skillshop",
-      issued: "Aug 2023",
-      expires: "Aug 2024",
-      // Expired -- worth renewing given your analytics work
-      status: "expired",
-      showOnResume: true,
-    resumeVersions: ["all"],
-    },
+
+    // ─── About page only -- not on any resume version ────────────────
     {
       name: "Programming Foundations: Software Testing/QA",
       issuer: "LinkedIn Learning",
       issued: "Jul 2023",
       status: "active",
       showOnResume: false,
-    resumeVersions: [],
+      resumeVersions: [],
     },
     {
       name: "React: Creating and Hosting a Full-Stack Site",
@@ -181,7 +194,7 @@ export const about = {
       issued: "Jun 2023",
       status: "active",
       showOnResume: false,
-    resumeVersions: [],
+      resumeVersions: [],
     },
     {
       name: "Flutter Mobile Applications Development",
@@ -189,7 +202,31 @@ export const about = {
       issued: "Aug 2022",
       status: "active",
       showOnResume: false,
-    resumeVersions: [],
+      resumeVersions: [],
     },
   ] as Certification[],
+
+  // Resume PDF download paths -- files live in /public/resume/
+  // Generate PDFs from the Word documents, name them exactly as below,
+  // and place them in public/resume/ before deploying.
+  resumeDownloads: [
+    {
+      label: "Frontend Developer",
+      description: "Emphasizes technical depth, component architecture, and independent project delivery.",
+      path: "/resume/michael-flanagan-frontend-developer.pdf",
+      version: "frontend",
+    },
+    {
+      label: "Marketing Technologist",
+      description: "Emphasizes the intersection of frontend development, HubSpot CMS, and marketing operations.",
+      path: "/resume/michael-flanagan-marketing-technologist.pdf",
+      version: "marketing-technologist",
+    },
+    {
+      label: "HubSpot Developer",
+      description: "Emphasizes HubSpot CMS expertise, HubL development, and platform administration.",
+      path: "/resume/michael-flanagan-hubspot-developer.pdf",
+      version: "hubspot",
+    },
+  ],
 };
