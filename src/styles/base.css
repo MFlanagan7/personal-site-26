@@ -7,7 +7,10 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-serif);
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
@@ -25,9 +28,16 @@ h1, h2, h3, h4 {
   outline: none;
 }
 
+#resume-download-anchor {
+  display: none !important;
+}
+
 /* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -36,6 +46,120 @@ h1, h2, h3, h4 {
 }
 
 /* Prevent text from becoming too wide to read comfortably */
-p, li, blockquote {
+p,
+li,
+blockquote {
   max-width: 65ch;
+}
+
+/* ============================================================
+   PRINT STYLES -- /resume page
+   Only affects @media print so no impact on screen rendering.
+============================================================ */
+
+@media print {
+
+  /* Hide everything except the resume content zones */
+  header,
+  footer,
+  nav,
+  #resume-downloads,
+  .printPrompt,
+  .printBtn,
+  .caseStudyLink,
+  .availabilityBadge {
+    display: none !important;
+  }
+
+  /* Reset page */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    background: #ffffff;
+    color: #2a2520;
+    font-size: 11pt;
+  }
+
+  /* Remove fixed header offset since the header is hidden */
+  #resume-summary {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    background: #ffffff !important;
+    border-bottom: 2px solid #2a2520 !important;
+  }
+
+  .highlights {
+    background: #ffffff !important;
+  }
+
+  .prevSection {
+    background: #ffffff !important;
+  }
+
+  /* Ensure links show their URL on paper */
+  .summaryLink::after {
+    content: none;
+  }
+
+  /* Prevent awkward page breaks inside cards */
+  .roleCard,
+  .eduItem,
+  .certItem,
+  .prevRole {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Tighten spacing for print */
+  .highlights,
+  .prevSection {
+    padding-block: 1rem !important;
+  }
+
+  /* Accent color on paper -- #a86828 prints legibly */
+  .roleCompany,
+  .eduSchool {
+    color: #a86828 !important;
+  }
+
+  /* Remove borders that look odd on paper */
+  .skillPill {
+    border: 1px solid #e8e5e0 !important;
+  }
+
+  /* Hide availability badge */
+  #resume-availability {
+    display: none !important;
+  }
+
+  /* Hide the download anchor link -- not useful on paper */
+  #resume-downloads,
+  .downloadAnchor {
+    display: none !important;
+  }
+
+  #resume-highlights {
+    padding-block: 1rem !important;
+  }
+
+  #resume-skills-sidebar {
+    margin-top: -2.5rem !important;
+    padding-top: 0 !important;
+  }
+
+  .education-sidebar {
+    padding-top: 1rem !important;
+  }
+
+  /* Data attribute print toggles */
+  [data-print="hide"] {
+    display: none !important;
+  }
+
+  [data-print="show"] {
+    display: block !important;
+  }
 }

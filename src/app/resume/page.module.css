@@ -1,0 +1,481 @@
+/* ============================================================
+   RESUME PAGE
+   Three zones: summary strip, highlights, download section.
+   Print styles live in print.css -- imported in layout.tsx.
+============================================================ */
+
+/* ============================================================
+   SUMMARY STRIP
+============================================================ */
+.summary {
+  padding-top: calc(var(--space-8) + 72px);
+  padding-bottom: var(--space-7);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
+}
+
+.summaryInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .summaryInner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.summaryLeft {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.availabilityBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  padding: var(--space-1) var(--space-3);
+  width: fit-content;
+  margin-bottom: var(--space-2);
+}
+
+.availabilityDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4caf7d;
+  flex-shrink: 0;
+}
+
+.summaryName {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.summaryTitle {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  max-width: none;
+}
+
+.summaryLocation {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-subtle);
+  max-width: none;
+}
+
+.summaryLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.summaryLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.summaryLink:hover {
+  color: var(--color-accent);
+}
+
+.downloadAnchor {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  text-decoration: none;
+  margin-top: var(--space-2);
+  transition: color 0.2s ease;
+}
+
+.downloadAnchor:hover {
+  color: var(--color-accent-light);
+}
+
+/* ============================================================
+   HIGHLIGHTS
+============================================================ */
+.highlights {
+  padding-block: var(--space-7);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+}
+
+@media (min-width: 1024px) {
+  .highlightsGrid {
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-8);
+  }
+}
+
+/* ============================================================
+   BLOCK HEADING -- shared across all sections
+============================================================ */
+.blockHeading {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ============================================================
+   ROLE CARD
+============================================================ */
+.roleCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.roleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.roleCompany {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.rolePeriod {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--color-text-subtle);
+}
+
+.roleTitle {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--color-text);
+  max-width: none;
+}
+
+.roleHighlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.roleHighlight {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.roleHighlight::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 12px;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+.caseStudyLink {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  align-self: flex-start;
+}
+
+.caseStudyLink:hover {
+  color: var(--color-accent-light);
+}
+
+/* ============================================================
+   SIDEBAR BLOCKS
+============================================================ */
+.highlightSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.sidebarBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+}
+
+.skillPill {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-border);
+}
+
+.skillPillPrimary {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.eduItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: var(--space-4);
+}
+
+.eduItem:last-child {
+  margin-bottom: 0;
+}
+
+.eduDegree {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--color-text);
+  max-width: none;
+}
+
+.eduSchool {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--color-accent);
+  max-width: none;
+}
+
+.eduMeta {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--color-text-subtle);
+  max-width: none;
+}
+
+.eduHonors {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  font-style: italic;
+  max-width: none;
+}
+
+.certList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.certItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  flex-wrap: wrap;
+}
+
+.certName {
+  color: var(--color-text-muted);
+}
+
+.certStatus {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-subtle);
+  white-space: nowrap;
+}
+
+.certStatus[data-status="active"] {
+  color: #4caf7d;
+}
+
+.certStatus[data-status="expired"] {
+  color: var(--color-text-subtle);
+  text-decoration: line-through;
+}
+
+.certStatus[data-status="in-progress"] {
+  color: var(--color-accent);
+}
+
+/* ============================================================
+   PREVIOUS EXPERIENCE
+============================================================ */
+.prevSection {
+  padding-block: var(--space-7);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
+}
+
+.prevRole {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.prevRoleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.prevRoleMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1);
+}
+
+/* ============================================================
+   DOWNLOAD SECTION
+============================================================ */
+.downloads {
+  padding-block: var(--space-8);
+}
+
+.downloadsHeader {
+  margin-bottom: var(--space-6);
+}
+
+.downloadsHeading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+
+.downloadsSub {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  max-width: none;
+}
+
+.downloadList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: var(--space-6);
+}
+
+.downloadItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.downloadItem:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.downloadBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.downloadLabel {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.downloadDescription {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--color-accent);
+  padding: var(--space-2) var(--space-4);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.downloadBtn:hover {
+  background: var(--color-accent-light);
+}
+
+.printPrompt {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-subtle);
+  max-width: none;
+}
+
+.roleCard [data-print="show"] {
+  display: none;
+}

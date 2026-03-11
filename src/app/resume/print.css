@@ -1,0 +1,79 @@
+/* ============================================================
+   RESUME PRINT STYLESHEET
+   Activated when the user prints the /resume page or clicks
+   the "Print this page" button. Strips the site shell and
+   produces a clean single-page document.
+============================================================ */
+
+@media print {
+
+  /* Hide everything except the resume content zones */
+  header,
+  footer,
+  nav,
+  #resume-downloads,
+  .printPrompt,
+  .printBtn,
+  .caseStudyLink,
+  .availabilityBadge {
+    display: none !important;
+  }
+
+  /* Reset page */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    background: #ffffff;
+    color: #2a2520;
+    font-size: 11pt;
+  }
+
+  /* Remove fixed header offset since the header is hidden */
+  #resume-summary {
+    padding-top: 1rem !important;
+    background: #ffffff !important;
+    border-bottom: 2px solid #2a2520 !important;
+  }
+
+  .highlights {
+    background: #ffffff !important;
+  }
+
+  .prevSection {
+    background: #ffffff !important;
+  }
+
+  /* Ensure links show their URL on paper */
+  .summaryLink::after {
+    content: none;
+  }
+
+  /* Prevent awkward page breaks inside cards */
+  .roleCard,
+  .eduItem,
+  .certItem,
+  .prevRole {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Tighten spacing for print */
+  .highlights,
+  .prevSection {
+    padding-block: 1rem !important;
+  }
+
+  /* Accent color on paper -- #a86828 prints legibly */
+  .roleCompany,
+  .eduSchool {
+    color: #a86828 !important;
+  }
+
+  /* Remove borders that look odd on paper */
+  .skillPill {
+    border: 1px solid #e8e5e0 !important;
+  }
+}

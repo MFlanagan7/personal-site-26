@@ -213,19 +213,19 @@ export const about = {
     {
       label: "Frontend Developer",
       description: "Emphasizes technical depth, component architecture, and independent project delivery.",
-      path: "/resume/michael-flanagan-frontend-developer.pdf",
+      path: "/resume/Michael_Flanagan_Resume_Frontend_Developer.pdf",
       version: "frontend",
     },
     {
       label: "Marketing Technologist",
       description: "Emphasizes the intersection of frontend development, HubSpot CMS, and marketing operations.",
-      path: "/resume/michael-flanagan-marketing-technologist.pdf",
+      path: "/resume/Michael_Flanagan_Resume_Marketing_Technologist.pdf",
       version: "marketing-technologist",
     },
     {
       label: "HubSpot Developer",
       description: "Emphasizes HubSpot CMS expertise, HubL development, and platform administration.",
-      path: "/resume/michael-flanagan-hubspot-developer.pdf",
+      path: "/resume/Michael_Flanagan_Resume_HubSpot_Developer.pdf",
       version: "hubspot",
     },
   ],
