@@ -89,7 +89,7 @@
   font-family: var(--font-sans);
   font-size: 0.88rem;
   color: var(--color-text-muted);
-  line-height: 1.75;
+  line-height: var(--leading-normal);
   margin-bottom: var(--space-4);
   max-width: none;
   flex: 1;
@@ -104,7 +104,7 @@
   font-family: var(--font-sans);
   font-size: 0.82rem;
   color: var(--color-text-muted);
-  line-height: 1.75;
+  line-height: var(--leading-normal);
   padding-left: var(--space-4);
   position: relative;
   margin-bottom: var(--space-2);

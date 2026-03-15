@@ -32,7 +32,7 @@
   font-family: var(--font-sans);
   font-size: 1rem;
   color: var(--color-text-muted);
-  line-height: 1.85;
+  line-height: var(--leading-normal);
   max-width: none;
 }
 
@@ -272,7 +272,7 @@
   font-family: var(--font-sans);
   font-size: 1rem;
   color: var(--color-text-muted);
-  line-height: 1.8;
+  line-height: var(--leading-normal);
   margin-bottom: var(--space-5);
   max-width: none;
 }

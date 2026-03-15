@@ -35,7 +35,7 @@
 .text {
   font-family: var(--font-serif);
   font-size: clamp(1.05rem, 2.2vw, 1.3rem);
-  line-height: 1.8;
+  line-height: var(--leading-normal);
   color: var(--color-text);
   /* override base.css max-width: 65ch for this element */
   max-width: none;

@@ -63,7 +63,7 @@
   font-family: var(--font-sans);
   font-size: 1rem;
   color: var(--color-text-muted);
-  line-height: 1.75;
+  line-height: var(--leading-normal);
   max-width: none;
 }
 
@@ -127,7 +127,7 @@
   font-family: var(--font-sans);
   font-size: 0.88rem;
   color: var(--color-text-muted);
-  line-height: 1.75;
+  line-height: var(--leading-normal);
   margin-bottom: var(--space-4);
   max-width: none;
   /* push links to bottom of card */

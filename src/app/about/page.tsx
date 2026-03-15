@@ -17,7 +17,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About"
         heading="The person behind the code"
-        sub="Developer, marketing technologist, occasional dungeon master."
+        sub="Developer, marketing technologist, occasional tabletop gamemaster."
       />
 
       {/* Bio */}

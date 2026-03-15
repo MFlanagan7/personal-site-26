@@ -107,7 +107,7 @@
   font-family: var(--font-sans);
   font-size: 0.95rem;
   color: var(--color-text-muted);
-  line-height: 1.8;
+  line-height: var(--leading-normal);
   margin-bottom: var(--space-4);
   max-width: none;
 }
@@ -121,7 +121,7 @@
   font-family: var(--font-sans);
   font-size: 0.86rem;
   color: var(--color-text-muted);
-  line-height: 1.75;
+  line-height: var(--leading-normal);
   padding-left: var(--space-4);
   position: relative;
   margin-bottom: var(--space-2);

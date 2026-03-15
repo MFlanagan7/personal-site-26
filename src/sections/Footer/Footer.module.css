@@ -55,7 +55,7 @@
   font-family: var(--font-sans);
   font-size: 0.82rem;
   color: var(--color-text-subtle);
-  line-height: 1.5;
+  line-height: var(--leading-normal);
   max-width: none;
 }
 
