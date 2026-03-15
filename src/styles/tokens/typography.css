@@ -4,8 +4,8 @@
   --font-mono: var(--font-mono-loaded), monospace;
 
   /* Scale */
-  --text-xs:   0.75rem;   /* 12px -- labels, tags */
-  --text-sm:   0.875rem;  /* 14px -- captions, meta */
+  --text-xs:   0.875rem;  /* 14px -- labels, tags */
+  --text-sm:   0.938rem;  /* 15px -- captions, meta */
   --text-base: 1rem;      /* 16px -- body */
   --text-lg:   1.125rem;  /* 18px -- lead text */
   --text-xl:   1.25rem;   /* 20px -- small headings */

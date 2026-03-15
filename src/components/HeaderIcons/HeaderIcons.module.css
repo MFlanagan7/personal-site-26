@@ -82,4 +82,8 @@
     /* Small gap between search and any future icons at desktop */
     gap: var(--space-2);
   }
+
+  .icons svg {
+    margin-right: var(--space-3);
+  }
 }

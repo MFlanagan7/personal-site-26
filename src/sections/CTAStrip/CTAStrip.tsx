@@ -20,7 +20,7 @@ export default function CTAStrip() {
 
         <div className={styles.actions}>
           <a
-            href="mailto:hello@michaelflanagan.dev"
+            href="mailto:mflanagan7@gmail.com"
             className={styles.btnPrimary}
           >
             Get In Touch
