@@ -3,6 +3,7 @@ import { DM_Sans, Lora, Courier_Prime } from "next/font/google";
 import './globals.css';
 import Header from '@/sections/Header/Header';
 import Footer from '@/sections/Footer/Footer';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -23,19 +24,7 @@ const courierPrime = Courier_Prime({
   display: "swap",
 });
 
-// export const metadata: Metadata = {
-//   title: {
-//     default: "Michael Flanagan — Frontend Developer & Marketing Technologist",
-//     template: "%s | Michael Flanagan",
-//   },
-//   description:
-//     "Frontend developer and marketing technologist based in Oklahoma City. Specializing in HubSpot CMS, React, and building web experiences that drive real business outcomes.",
-//   openGraph: {
-//     siteName: "Michael Flanagan",
-//     locale: "en_US",
-//     type: "website",
-//   },
-// }
+
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://michaelflanagan.dev"),
@@ -129,6 +118,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-BYVJHNTNVL" />
     </html>
   );
 }
