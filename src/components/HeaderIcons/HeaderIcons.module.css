@@ -4,7 +4,7 @@
   align-items: center;
   /* No gap between search and hamburger on mobile --
      the tap targets provide enough visual separation */
-  gap: 0;
+  gap: var(--space-3);
   /* position relative anchors the mobile dropdown
      to the right edge of this component */
   position: relative;
