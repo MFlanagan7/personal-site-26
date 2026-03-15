@@ -32,7 +32,7 @@
   color: var(--color-text);
   text-decoration: none;
   flex-shrink: 0;
-  margin-right: var(--space-9); /* remove this line to move nav back to the left side */
+  margin-right: var(--space-7); /* remove this line to move nav back to the left side */
 }
 
 /* Desktop and up -- 1024px */
