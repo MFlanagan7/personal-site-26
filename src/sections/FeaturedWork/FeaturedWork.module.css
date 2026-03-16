@@ -22,7 +22,7 @@
 
 .eyebrowText {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-text-subtle);
@@ -37,7 +37,7 @@
 
 .eyebrowLink {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -105,7 +105,7 @@
 /* #a86828 on #ffffff = 5.1:1 -- passes AA */
 .cardCompany {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-accent);

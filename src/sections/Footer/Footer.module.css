@@ -115,12 +115,12 @@
 
 .copyright {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   color: var(--color-text-subtle);
 }
 
 .built {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   color: var(--color-text-subtle);
 }
