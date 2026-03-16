@@ -15,7 +15,7 @@
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-text-subtle);
+  color: var(--color-text-muted);
   text-decoration: none;
   margin-bottom: var(--space-6);
   transition: color 0.2s ease;
@@ -36,12 +36,12 @@
   text-transform: uppercase;
   padding: 2px var(--space-2);
   border: 1px solid var(--color-border);
-  color: var(--color-text-subtle);
+  color: var(--color-text-muted);
 }
 
 .headerStatus[data-status="live"] {
-  color: #4caf7d;
-  border-color: #4caf7d;
+  color: var(--color-success);
+  border-color: var(--color-success);
 }
 
 .headerStatus[data-status="in-progress"] {
@@ -80,7 +80,7 @@
   font-size: 0.82rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-text-subtle);
+  color: var(--color-text-muted);
   border: 1px solid var(--color-border);
   padding: 2px var(--space-2);
 }

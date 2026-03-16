@@ -54,7 +54,7 @@
 .tagline {
   font-family: var(--font-sans);
   font-size: 0.82rem;
-  color: var(--color-text-subtle);
+  
   line-height: var(--leading-normal);
   max-width: none;
 }
@@ -78,7 +78,7 @@
   font-size: 0.82rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-text-subtle);
+  
 }
 
 .navList {
@@ -116,11 +116,11 @@
 .copyright {
   font-family: var(--font-sans);
   font-size: 0.82rem;
-  color: var(--color-text-subtle);
+  
 }
 
 .built {
   font-family: var(--font-sans);
   font-size: 0.82rem;
-  color: var(--color-text-subtle);
+  
 }

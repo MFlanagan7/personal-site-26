@@ -1,14 +1,15 @@
 :root {
   --color-bg:           #faf9f7;
-  --color-bg-subtle:    #f0ece6;
+  --color-bg-subtle:    #f7f7f7;
   --color-surface:      #ffffff;
   --color-text:         #2a2520;
-  --color-text-muted:   #6b6259;
+  --color-text-muted:   #423e38;
   --color-text-subtle:  #a89e94;
-  --color-border:       #e8e5e0;
-  --color-accent:       #a86828;  /* darkened from #c17f3e for AA compliance */
-  --color-accent-light: #c17f3e;  /* original amber now used as hover/light variant */
+  --color-border:       #96906e;
+  --color-accent:       #a16326;  
+  --color-accent-light: #c17f3e;  
   --color-accent-dim:   #f5ebe0;
+  --color-success: #3a7d44;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,8 +21,9 @@
     --color-text-muted:   #a89e94;
     --color-text-subtle:  #8f8276;
     --color-border:       #2a2520;
-    --color-accent:       #e8a96a;  /* lighter in dark mode for contrast on dark bg */
+    --color-accent:       #e8a96a;  
     --color-accent-light: #f5c898;
     --color-accent-dim:   #2a1f14;
+    --color-success: #4caf7d;
   }
 }

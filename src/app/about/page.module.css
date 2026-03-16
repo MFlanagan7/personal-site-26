@@ -62,7 +62,7 @@
   font-size: 0.82rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-text-subtle);
+  color: var(--color-text-muted);
 }
 
 .skillList {
@@ -152,13 +152,13 @@
 .eduPeriod {
   font-family: var(--font-sans);
   font-size: 0.82rem;
-  color: var(--color-text-subtle);
+  color: var(--color-text-muted);
 }
 
 .eduGpa {
   font-family: var(--font-sans);
   font-size: 0.82rem;
-  color: var(--color-text-subtle);
+  color: var(--color-text-muted);
 }
 
 .eduHonors {
@@ -181,7 +181,7 @@
 .eduNote {
   font-family: var(--font-sans);
   font-size: 0.82rem;
-  color: var(--color-text-subtle);
+  color: var(--color-text-muted);
   font-style: italic;
   max-width: none;
 }
@@ -225,7 +225,7 @@
 .certIssuer {
   font-family: var(--font-sans);
   font-size: 0.82rem;
-  color: var(--color-text-subtle);
+  color: var(--color-text-muted);
 }
 
 .certMeta {
@@ -238,7 +238,7 @@
 .certDate {
   font-family: var(--font-sans);
   font-size: 0.82rem;
-  color: var(--color-text-subtle);
+  color: var(--color-text-muted);
 }
 
 .certStatus {
@@ -248,12 +248,12 @@
   text-transform: uppercase;
   padding: 2px var(--space-2);
   border: 1px solid var(--color-border);
-  color: var(--color-text-subtle);
+  color: var(--color-text-muted);
 }
 
 .certStatus[data-status="active"] {
-  color: #4caf7d;
-  border-color: #4caf7d;
+  color: var(--color-success);
+  border-color: var(--color-success);
 }
 
 .certStatus[data-status="in-progress"] {
