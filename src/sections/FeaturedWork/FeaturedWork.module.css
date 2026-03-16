@@ -114,7 +114,7 @@
 
 .cardPeriod {
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   color: var(--color-text-subtle);
 }
 
@@ -169,7 +169,7 @@
 
 .tag {
   font-family: var(--font-sans);
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-subtle);
@@ -182,7 +182,7 @@
   align-items: center;
   gap: var(--space-2);
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-accent);

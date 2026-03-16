@@ -15,7 +15,7 @@
   display: inline-flex;
   align-items: center;
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-text-subtle);
@@ -47,7 +47,7 @@
 
 .headerPeriod {
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   color: var(--color-text-subtle);
 }
 
@@ -63,7 +63,7 @@
 
 .headerLocation {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--color-text-subtle);
   margin-bottom: var(--space-5);
   max-width: none;
@@ -78,7 +78,7 @@
 
 .tag {
   font-family: var(--font-sans);
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-subtle);
@@ -97,7 +97,7 @@
   align-items: center;
   gap: var(--space-2);
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -107,6 +107,18 @@
 
 .headerLink:hover {
   color: var(--color-accent-light);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* ============================================================
@@ -190,7 +202,7 @@
 
 .footerNavLink {
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-text-muted);

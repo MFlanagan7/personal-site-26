@@ -74,6 +74,9 @@ export default async function CaseStudyPage({ params }: Props) {
 
       <section className={styles.section} aria-labelledby="summary-heading">
         <Container size="md">
+          <h2 id="summary-heading" className={styles.visuallyHidden}>
+            Summary
+          </h2>
           <p className={styles.summary}>{job.summary}</p>
         </Container>
       </section>

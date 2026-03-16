@@ -75,7 +75,7 @@
 
 .navLabel {
   font-family: var(--font-sans);
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-text-subtle);
@@ -90,7 +90,7 @@
 
 .navLink {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--color-text-muted);
   text-decoration: none;
   transition: color 0.2s ease;
