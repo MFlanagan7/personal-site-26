@@ -41,13 +41,13 @@ export const projects: Project[] = [
     status: "live",
     caseStudy: {
       problem:
-        "Wanted to explore how Next.js handles server-side data fetching and static generation compared to client-side React patterns -- and build something functional rather than another tutorial project.",
+        "Wanted to explore how Next.js handles server-side data fetching and static generation compared to client-side React patterns, and build something functional rather than another tutorial project.",
       process:
         "Built a news aggregator using the Mediastack API, deliberately focusing on the data fetching layer. Implemented getStaticProps for build-time data fetching, explored the tradeoffs between static generation and server-side rendering, and structured components to keep data fetching concerns separate from presentation.",
       outcome:
         "A working news aggregator with fast static output, deployed to Vercel. More importantly, a clear mental model of when to use each Next.js data fetching strategy based on how frequently the data changes.",
       lesson:
-        "Static generation is the right default for data that doesn't need to be real-time. Understanding the update frequency of your data should drive your fetching strategy -- not habit or convention.",
+        "Static generation is the right default for data that doesn't need to be real-time. Understanding the update frequency of your data should drive your fetching strategy, not habit or convention.",
     },
   },
 ];

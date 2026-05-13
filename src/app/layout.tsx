@@ -29,19 +29,19 @@ const courierPrime = Courier_Prime({
 export const metadata: Metadata = {
   metadataBase: new URL("https://michaelflanagan.dev"),
   title: {
-    default: "Michael Flanagan — Frontend Developer & Marketing Technologist",
+    default: "Michael Flanagan | Marketing Technologist & HubSpot Developer",
     template: "%s | Michael Flanagan",
   },
   description:
-    "Frontend developer and marketing technologist based in Oklahoma City. Specializing in HubSpot CMS, React, and building web experiences that drive real business outcomes.",
+    "Marketing technologist and HubSpot CMS developer based in Oklahoma City. Specializing in HubSpot, HubL, JavaScript, and AI-assisted workflows that bridge marketing and engineering.",
   keywords: [
-    "frontend developer",
     "marketing technologist",
+    "HubSpot developer",
     "HubSpot CMS developer",
-    "React developer",
+    "HubL developer",
+    "JavaScript developer",
+    "AI-assisted development",
     "Oklahoma City",
-    "web developer",
-    "HubL",
     "Next.js",
   ],
   authors: [{ name: "Michael Flanagan", url: "https://michaelflanagan.dev" }],
@@ -51,23 +51,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://michaelflanagan.dev",
     siteName: "Michael Flanagan",
-    title: "Michael Flanagan — Frontend Developer & Marketing Technologist",
+    title: "Michael Flanagan | Marketing Technologist & HubSpot Developer",
     description:
-      "Frontend developer and marketing technologist based in Oklahoma City. Specializing in HubSpot CMS, React, and building web experiences that drive real business outcomes.",
+      "Marketing technologist and HubSpot CMS developer based in Oklahoma City. Specializing in HubSpot, HubL, JavaScript, and AI-assisted workflows that bridge marketing and engineering.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Michael Flanagan — Frontend Developer & Marketing Technologist",
+        alt: "Michael Flanagan | Marketing Technologist & HubSpot Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Michael Flanagan — Frontend Developer & Marketing Technologist",
+    title: "Michael Flanagan | Marketing Technologist & HubSpot Developer",
     description:
-      "Frontend developer and marketing technologist based in Oklahoma City. Specializing in HubSpot CMS, React, and building web experiences that drive real business outcomes.",
+      "Marketing technologist and HubSpot CMS developer based in Oklahoma City. Specializing in HubSpot, HubL, JavaScript, and AI-assisted workflows that bridge marketing and engineering.",
     images: ["/og-image.png"],
   },
   robots: {

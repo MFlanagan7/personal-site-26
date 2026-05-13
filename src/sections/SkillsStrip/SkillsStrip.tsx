@@ -17,6 +17,10 @@ const skills = {
     "Accessibility",
     "SEO",
     "Git",
+    "Claude / Claude Code",
+    "AI-Assisted Development",
+    "Prompt Engineering",
+    "HubSpot Breeze",
   ],
 };
 

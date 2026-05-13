@@ -20,8 +20,8 @@ export interface Certification {
   status: "active" | "expired" | "in-progress";
   showOnResume: boolean;
   // which resume versions this cert appears on
-  // "all" = frontend, marketing-technologist, hubspot
-  resumeVersions: ("all" | "frontend" | "marketing-technologist" | "hubspot")[];
+  // "all" = frontend + marketing-technologist
+  resumeVersions: ("all" | "frontend" | "marketing-technologist")[];
 }
 
 export interface SkillGroup {
@@ -34,16 +34,16 @@ export interface SkillGroup {
 
 export const about = {
   name: "Michael Flanagan",
-  title: "Frontend Developer & Marketing Technologist",
+  title: "Marketing Technologist & HubSpot Developer",
   tagline:
-    "I build and optimize web experiences that drive real business outcomes. Currently at the intersection of frontend development and marketing technology.",
+    "I build and optimize web experiences that drive real business outcomes. Currently at the intersection of marketing technology and HubSpot development.",
 
   // Bio paragraphs -- used on the About page
   // Keep these honest and in first person.
   bio: [
-    "I'm a frontend developer working at the intersection of code and marketing technology. Currently at WEOKIE Federal Credit Union, where I sole-implemented a full website redesign for a $1.5B financial institution -- building 20+ custom HubSpot modules and migrating 150+ pages from a fragmented legacy platform.",
-    "My background spans frontend development, HubSpot CMS development, marketing operations, and analytics. I'm HubSpot CMS for Developers II certified and bring both the technical precision to build things right and enough business context to understand why they need to exist.",
-    "I studied Computer Science at the University of Central Oklahoma and Oklahoma City Community College -- while working full-time and raising a family, which taught me as much about prioritization and resilience as any coursework did.",
+    "I'm a marketing technologist and HubSpot CMS developer working at the intersection of code and marketing. Currently at WEOKIE Federal Credit Union, where I sole-implemented a full website redesign for a $1.5B financial institution, building 20+ custom HubSpot modules and migrating 150+ pages from a fragmented legacy platform.",
+    "My background spans HubSpot CMS development, frontend development, marketing operations, and analytics. I'm HubSpot CMS for Developers II certified and bring both the technical precision to build things right and enough business context to understand why they need to exist. I integrate AI tooling (Claude, Claude Code, HubSpot Breeze) into daily development and content workflows.",
+    "I studied Computer Science at the University of Central Oklahoma and Oklahoma City Community College while working full-time and raising a family. That taught me as much about prioritization and resilience as any coursework did.",
     "Outside of work I'm into gaming, D&D, and design. I'm currently building this portfolio with a custom Next.js design system, reading The Pragmatic Programmer, and working toward my HubSpot Integrations certification.",
   ],
 
@@ -53,6 +53,8 @@ export const about = {
   links: {
     github: "https://github.com/MFlanagan7",
     linkedin: "https://linkedin.com/in/michael-flanagan",
+    bluesky: "https://bsky.app/profile/michaelflanagan.dev",
+    infocard: "https://infocard.ai/~MFlanagan7",
     email: "mflanagan7@gmail.com",
     resume: "/resume",
     portfolio: "https://michaelflanagan.dev",
@@ -78,6 +80,10 @@ export const about = {
       "WordPress",
       "UTM Tracking",
       "Email Marketing",
+      "Claude / Claude Code",
+      "AI-Assisted Development",
+      "Prompt Engineering",
+      "HubSpot Breeze",
     ],
     // Familiar with or actively exploring -- not production-proficient.
     // Do NOT list these on the resume skills section.
@@ -150,7 +156,7 @@ export const about = {
       resumeVersions: ["all"],
     },
 
-    // ─── Tier 2 -- HubSpot and Marketing Technologist versions only ─
+    // ─── Tier 2 // Marketing Technologist resume only ───────────────
     {
       name: "HubSpot CMS for Developers",
       issuer: "HubSpot Academy",
@@ -158,7 +164,7 @@ export const about = {
       expires: "Apr 2025",
       status: "active",
       showOnResume: true,
-      resumeVersions: ["hubspot", "marketing-technologist"],
+      resumeVersions: ["marketing-technologist"],
     },
     {
       name: "Contextual Marketing",
@@ -167,7 +173,7 @@ export const about = {
       expires: "Nov 2025",
       status: "active",
       showOnResume: true,
-      resumeVersions: ["hubspot", "marketing-technologist"],
+      resumeVersions: ["marketing-technologist"],
     },
     {
       name: "Integrating With HubSpot I: Foundations",
@@ -176,10 +182,10 @@ export const about = {
       expires: "",  // update when earned
       status: "in-progress",
       showOnResume: true,
-      resumeVersions: ["hubspot", "marketing-technologist"],
+      resumeVersions: ["marketing-technologist"],
     },
 
-    // ─── About page only -- not on any resume version ────────────────
+    // ─── About page only // not on any resume version ───────────────
     {
       name: "Programming Foundations: Software Testing/QA",
       issuer: "LinkedIn Learning",
@@ -206,27 +212,21 @@ export const about = {
     },
   ] as Certification[],
 
-  // Resume PDF download paths -- files live in /public/resume/
+  // Resume PDF download paths // files live in /public/resume/
   // Generate PDFs from the Word documents, name them exactly as below,
   // and place them in public/resume/ before deploying.
   resumeDownloads: [
     {
-      label: "Frontend Developer",
-      description: "Emphasizes technical depth, component architecture, and independent project delivery.",
-      path: "/resume/Michael_Flanagan_Resume_Frontend_Developer.pdf",
-      version: "frontend",
-    },
-    {
-      label: "Marketing Technologist",
-      description: "Emphasizes the intersection of frontend development, HubSpot CMS, and marketing operations.",
-      path: "/resume/Michael_Flanagan_Resume_Marketing_Technologist.pdf",
+      label: "Marketing Technologist & HubSpot Developer",
+      description: "Emphasizes HubSpot CMS development, marketing operations, and AI-assisted workflows.",
+      path: "/resume/Michael_Flanagan_Resume_Marketing_Tech_HubSpot.docx.pdf",
       version: "marketing-technologist",
     },
     {
-      label: "HubSpot Developer",
-      description: "Emphasizes HubSpot CMS expertise, HubL development, and platform administration.",
-      path: "/resume/Michael_Flanagan_Resume_HubSpot_Developer.pdf",
-      version: "hubspot",
+      label: "Frontend Developer",
+      description: "Emphasizes technical depth, component architecture, and independent project delivery.",
+      path: "/resume/Michael_Flanagan_Resume_Frontend_Developer.docx.pdf",
+      version: "frontend",
     },
   ],
 };

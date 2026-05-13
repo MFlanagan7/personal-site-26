@@ -9,7 +9,7 @@
   --color-accent:       #a16326;  
   --color-accent-light: #c17f3e;  
   --color-accent-dim:   #f5ebe0;
-  --color-success: #3a7d44;
+  --color-success:      #3a7d44;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +24,6 @@
     --color-accent:       #e8a96a;  
     --color-accent-light: #f5c898;
     --color-accent-dim:   #2a1f14;
-    --color-success: #4caf7d;
+    --color-success:      #4caf7d;
   }
 }

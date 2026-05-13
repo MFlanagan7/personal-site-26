@@ -8,7 +8,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Professional experience and case studies from Michael Flanagan -- frontend developer and marketing technologist.",
+    "Professional experience and case studies from Michael Flanagan, marketing technologist and HubSpot CMS developer.",
 };
 
 export default function WorkPage() {

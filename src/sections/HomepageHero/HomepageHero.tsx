@@ -20,13 +20,13 @@ export default function HomepageHero() {
                 <div className={styles.eyebrow} aria-hidden="true">
                     <span className={styles.eyebrowLine} />
                     <span className={styles.eyebrowText}>
-                        Frontend Developer &amp; Marketing Technologist
+                        Marketing Technologist &amp; HubSpot Developer
                     </span>
                 </div>
 
                 {/* Heading */}
                 <h1 className={styles.heading}>
-                    Developer at the{" "}
+                    Marketing technologist at the{" "}
                     <em className={styles.headingAccent}>intersection of code</em>{" "}
                     and marketing.
                 </h1>
@@ -36,7 +36,9 @@ export default function HomepageHero() {
                     I build and optimize web experiences that drive real business
                     outcomes. Currently at WEOKIE Federal Credit Union, where I
                     sole&#8209;implemented a full website redesign for a $1.5B
-                    financial institution.
+                    financial institution. I integrate AI tooling (Claude, Claude
+                    Code, HubSpot Breeze) into daily development and content
+                    workflows.
                 </p>
 
                 {/* Actions */}

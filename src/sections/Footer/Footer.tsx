@@ -16,7 +16,7 @@ export default function Footer() {
               Michael Flanagan
             </Link>
             <p className={styles.tagline}>
-              Frontend Developer &amp; Marketing Technologist
+              Marketing Technologist &amp; HubSpot Developer
             </p>
           </div>
 
@@ -35,12 +35,22 @@ export default function Footer() {
               <ul className={styles.navList}>
                 <li>
                   <a
-                    href={about.links.github}
+                    href={about.links.bluesky}
                     className={styles.navLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    GitHub
+                    Bluesky
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={about.links.infocard}
+                    className={styles.navLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    infocard
                   </a>
                 </li>
                 <li>
@@ -51,6 +61,16 @@ export default function Footer() {
                     rel="noopener noreferrer"
                   >
                     LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={about.links.github}
+                    className={styles.navLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
                   </a>
                 </li>
                 <li>

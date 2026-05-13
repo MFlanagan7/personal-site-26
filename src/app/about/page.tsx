@@ -8,7 +8,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Frontend developer and marketing technologist based in Oklahoma City. Learn more about Michael Flanagan.",
+    "Marketing technologist and HubSpot CMS developer based in Oklahoma City. Specializing in HubSpot, HubL, JavaScript, and AI-assisted workflows that bridge marketing and engineering.",
 };
 
 export default function AboutPage() {
@@ -17,7 +17,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About"
         heading="The person behind the code"
-        sub="Developer, marketing technologist, occasional tabletop gamemaster."
+        sub="Marketing technologist, HubSpot developer, occasional tabletop gamemaster."
       />
 
       {/* Bio */}
@@ -169,8 +169,9 @@ export default function AboutPage() {
             Get In Touch
           </h2>
           <p className={styles.connectText}>
-            Open to full-time roles and interesting freelance projects --
-            especially where development and marketing strategy intersect.
+            Open to full-time, contract, consulting, freelance, and part-time
+            roles where development and marketing strategy intersect.
+            Comfortable fully remote.
           </p>
           <div className={styles.connectLinks}>
             <a

@@ -13,9 +13,9 @@ export default function CTAStrip() {
         </h2>
 
         <p className={styles.sub}>
-          Open to full-time roles and interesting freelance projects.
-          Especially interested in teams where development and marketing
-          strategy intersect.
+          Open to full-time, contract, consulting, freelance, and part-time
+          roles where development and marketing strategy intersect. Comfortable
+          fully remote.
         </p>
 
         <div className={styles.actions}>

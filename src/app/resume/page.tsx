@@ -9,7 +9,7 @@ import PrintButton from "@/components/PrintButton/PrintButton";
 export const metadata: Metadata = {
   title: "Resume",
   description:
-    "Resume for Michael Flanagan -- Frontend Developer and Marketing Technologist based in Oklahoma City.",
+    "Resume for Michael Flanagan, Marketing Technologist and HubSpot Developer based in Oklahoma City.",
 };
 
 export default function ResumePage() {
@@ -255,7 +255,7 @@ export default function ResumePage() {
               Download Resume
             </h2>
             <p className={styles.downloadsSub}>
-              Three versions tailored for different role types. Pick the one
+              Two versions tailored for different role types. Pick the one
               that matches what you're looking for.
             </p>
           </div>
@@ -285,8 +285,7 @@ export default function ResumePage() {
           <p className={styles.printPrompt}>
             Prefer to print?{" "}
             <PrintButton />{" "}
-            -- the print stylesheet produces a clean single-page document
-            from the highlights above.
+            for a clean single-page document from the highlights above.
           </p>
 
         </Container>

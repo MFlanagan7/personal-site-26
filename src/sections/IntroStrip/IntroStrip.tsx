@@ -14,6 +14,10 @@ const pills = [
   "SEO",
   "UTM Tracking",
   "Git",
+  "Claude / Claude Code",
+  "AI-Assisted Development",
+  "Prompt Engineering",
+  "HubSpot Breeze",
 ];
 
 export default function IntroStrip() {
@@ -26,8 +30,8 @@ export default function IntroStrip() {
           <p className={styles.text}>
             I write clean code and ask{" "}
             <em className={styles.accent}>why it needs to exist.</em>{" "}
-            With a background spanning frontend development, HubSpot CMS,
-            marketing operations, and analytics -- I bridge the gap between
+            My background spans frontend development, HubSpot CMS,
+            marketing operations, and analytics. I bridge the gap between
             what engineers build and what businesses actually need.
           </p>
 
